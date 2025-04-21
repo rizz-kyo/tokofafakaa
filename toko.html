@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Fafackha</title>
+  <link rel="stylesheet" href="asset/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<footer>
+  <p>Ikuti kami di:</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/fafakhacake?igsh=MTZldmZ5NmUxdnZpMQ==" target="_blank" class="social-icon">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.facebook.com/share/1AMKouXs9W/" target="_blank" class="social-icon">
+      <i class="fab fa-facebook"></i> Facebook
+    </a>
+    <a href="https://wa.me/6283874183246" target="_blank" class="social-icon">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+  </div>
+</footer>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="poto barang/Cuplikan layar 2025-04-20 204729.png" alt="Logo Fafackha" class="logo-img">
+      <h1>Toko Fafackha</h1>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <button id="cart-btn">🛒 Keranjang (<span id="cart-count">0</span>)</button>
+      <a href="kontak.html" class="info-link">Request</a>
+    </div>
+  </header>
+
+  <main id="product-list">
+    <!-- Produk akan ditambahkan lewat JavaScript -->
+  </main>
+
+  <div id="cart-popup" class="hidden">
+    <span class="close-cart" onclick="toggleCart()">x</span>
+    <h2>Keranjang Belanja</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: <span id="total-price">Rp0</span></p>
+    <button onclick="toggleCart()">Tutup</button>
+    <a id="checkout-button" href="#" target="_blank">Pesan Sekarang</a>
+  </div>
+
+  <!-- Tombol Kembali di pojok kanan bawah -->
+  <button id="back-button" onclick="history.back()">⬅ Kembali</button>
+    <section id="ulasan">
+      <h2 class="fade-in">Ulasan Pelanggan</h2>
+      <div class="reviews">
+        <div class="review fade-in">
+          <p class="review-rating">⭐️⭐️⭐️⭐️⭐️</p>
+          <p class="review-comment">"Produknya bagus dan pengirimannya cepat! Terima kasih Toko Fafackha!"</p>
+          <strong class="review-name">- Rina, Jakarta</strong>
+          <div class="review-actions">
+            <button class="edit-review">Edit</button>
+            <button class="delete-review">Hapus</button>
+          </div>
+        </div>
+        <div class="review fade-in">
+          <p class="review-rating">⭐️⭐️⭐️⭐️</p>
+          <p class="review-comment">"Pelayanan ramah dan kualitas oke. Bakal order lagi deh!"</p>
+          <strong class="review-name">- Dimas, Bandung</strong>
+          <div class="review-actions">
+            <button class="edit-review">Edit</button>
+            <button class="delete-review">Hapus</button>
+          </div>
+        </div>
+        <div class="review fade-in">
+          <p class="review-rating">⭐️⭐️⭐️⭐️⭐️</p>
+          <p class="review-comment">"Cocok banget buat hadiah, dikemas rapi dan harganya terjangkau."</p>
+          <strong class="review-name">- Maya, Surabaya</strong>
+          <div class="review-actions">
+            <button class="edit-review">Edit</button>
+            <button class="delete-review">Hapus</button>
+          </div>
+        </div>
+        <div class="review fade-in">
+          <p class="review-rating">⭐️⭐️⭐️⭐️</p>
+          <p class="review-comment">"Cake-nya lembut dan manisnya pas. Anak-anak suka banget!"</p>
+          <strong class="review-name">- Wulan, Depok</strong>
+          <div class="review-actions">
+            <button class="edit-review">Edit</button>
+            <button class="delete-review">Hapus</button>
+          </div>
+        </div>
+        <div class="review fade-in">
+          <p class="review-rating">⭐️⭐️⭐️</p>
+          <p class="review-comment">"Pengiriman sedikit lama, tapi rasanya enak banget."</p>
+          <strong class="review-name">- Budi, Bekasi</strong>
+          <div class="review-actions">
+            <button class="edit-review">Edit</button>
+            <button class="delete-review">Hapus</button>
+          </div>
+        </div>
+        <div class="review fade-in">
+          <p class="review-rating">⭐️⭐️⭐️⭐️⭐️</p>
+          <p class="review-comment">"Sudah langganan sejak lama, kualitasnya selalu terjaga."</p>
+          <strong class="review-name">- Lestari, Semarang</strong>
+          <div class="review-actions">
+            <button class="edit-review">Edit</button>
+            <button class="delete-review">Hapus</button>
+          </div>
+        </div>
+      </div>
+    
+      <section id="form-ulasan" class="fade-in">
+        <h3>Berikan Ulasan Anda</h3>
+        <form id="review-form">
+          <input type="text" id="nama" placeholder="Nama Anda" required />
+          <textarea id="komentar" rows="4" placeholder="Tulis ulasan di sini..." required></textarea>
+          <select id="rating">
+            <option value="⭐️⭐️⭐️⭐️⭐️">5 Bintang</option>
+            <option value="⭐️⭐️⭐️⭐️">4 Bintang</option>
+            <option value="⭐️⭐️⭐️">3 Bintang</option>
+            <option value="⭐️⭐️">2 Bintang</option>
+            <option value="⭐️">1 Bintang</option>
+          </select>
+          <button type="submit">Kirim Ulasan</button>
+        </form>
+      </section>
+    </section>
+    
+  
+  <script src="asset/script.js"></script>
+</body>
+</html>

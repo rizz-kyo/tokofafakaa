@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Kue Fafakha</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff6f61;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffe5d4;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 3rem 2rem;
+      background-color: #fff0e6;
+    }
+
+    .hero img {
+      max-width: 40%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-description {
+      max-width: 50%;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .cake-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .cake-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .cake-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .cake-card .description {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #ff6f61;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      background-color: #ff6f61;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #ffe5d4;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero img, .hero-description {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color: white">Toko Fafakha</h1>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <img src="poto barang/Cuplikan layar 2025-04-20 204729.png" alt="Kue Istimewa">
+    <div class="hero-description">
+      <h2>Kue Spesial Hari Ini</h2>
+      <p>Nikmati rasa manis dari kue pilihan kami yang dibuat dengan bahan berkualitas dan cinta. Cocok untuk segala momen spesial Anda!</p>
+    </div>
+  </section>
+  <section class="gallery">
+    <div class="cake-card">
+      <img src="poto barang/kue 180.jpg" alt="Kue 1">
+      <div class="description">
+        Kue Cokelat Lezat
+        <div class="price">Rp 180.000</div>
+      </div>
+    </div>
+    <div class="cake-card">
+      <img src="poto barang/kue 190.jpg" alt="Kue 2">
+      <div class="description">
+        Kue Stroberi Manis
+        <div class="price">Rp 190.000</div>
+      </div>
+    </div>
+    <div class="cake-card">
+      <img src="poto barang/kue 250.jpg" alt="Kue 3">
+      <div class="description">
+        Kue Keju Lumer
+        <div class="price">Rp 250.000</div>
+      </div>
+    </div>
+    <div class="cake-card">
+      <img src="poto barang/kue 350.jpg" alt="Kue 4">
+      <div class="description">
+        Kue Ulang Tahun Spesial
+        <div class="price">Rp 350.000</div>
+      </div>
+    </div>
+    <div class="cake-card">
+      <img src="poto barang/kue 360.jpg" alt="Kue 5">
+      <div class="description">
+        Kue Cupcake Imut
+        <div class="price">Rp 360.000</div>
+      </div>
+    </div>
+    <div class="cake-card">
+      <img src="poto barang/kue 650.jpg" alt="Kue 6">
+      <div class="description">
+        Kue Red Velvet
+        <div class="price">Rp 650.000</div>
+      </div>
+    </div>
+    <div class="cake-card">
+      <img src="poto barang/kue150.jpg" alt="Kue 7">
+      <div class="description">
+        Kue Matcha Segar
+        <div class="price">Rp 150.000</div>
+      </div>
+    </div>
+    <div class="cake-card">
+      <img src="poto barang/kue250.jpg" alt="Kue 8">
+      <div class="description">
+        Kue Buah Tropis
+        <div class="price">Rp 250.000</div>
+      </div>
+    </div>
+    <div class="cake-card">
+      <img src="poto barang/kue370.jpg" alt="Kue 9">
+      <div class="description">
+        Kue Karakter Anak
+        <div class="price">Rp 370.000</div>
+      </div>
+    </div>
+    <div class="cake-card">
+      <img src="poto barang/kue 85.jpg" alt="Kue 10">
+      <div class="description">
+        Kue Klasik Tradisional
+        <div class="price">Rp 85.000</div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Hubungi Kami</h2>
+    <p>Email: info@tokokue.com | Telepon: +62 838-7418-3246</p>
+    <p>Alamat: Jl. Manis No. 123, Jakarta</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/fafakhacake?igsh=MTZldmZ5NmUxdnZpMQ==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/6283874183246" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/share/1AMKouXs9W/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    console.log("Website Toko Kue Manis telah dimuat.");
+  </script>
+</body>
+</html>
